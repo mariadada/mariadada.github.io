@@ -22,9 +22,22 @@
 
   });
 </script>
+
+<link rel="import" href="/bower_components/simpla-text/simpla-text.html">
+<link rel="import" href="/bower_components/simpla-img/simpla-img.html">
+<link rel="import" href="/bower_components/simpla-admin/simpla-admin.html" async>
+
+
 </header>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with Github Pages.</p>
+
+<!-- Block of editable richtext -->
+<simpla-text path="/text"></simpla-text>
+
+<!-- An editable image -->
+<img is="simpla-img" path="/section/img">
+
 </body>
 </html>
