@@ -1,43 +1,20 @@
-<!DOCTYPE html>
+<!DOCTYPE html>	
 <html>
-<header>
-	<!-- Include Simpla, Netlify auth adapter, and cross-browser polyfill-->
-<script src="https://unpkg.com/simpla@^3.0.0"></script>
-<script src="https://unpkg.com/simpla@^3.0.0/adapters/netlify.js"></script>
-<script src="https://unpkg.com/webcomponents.js@^0.7.24/webcomponents-lite.min.js" async></script>
-
-<!-- Init Simpla -->
-<script>
-  Simpla.init({
-
-    // The Github repo you want Simpla to use
-    repo: 'username/repo',
-
-    // Netlify auth adapter, initialize with your Netlify site name
-    auth: new SimplaNetlify({ site: 'mysite' }),
-
-    // Public content source (optional)
-    // Defaults to fetching directly from Github
-    source: 'https://mysite.netlify.com'
-
-  });
-</script>
-
-<link rel="import" href="/bower_components/simpla-text/simpla-text.html">
-<link rel="import" href="/bower_components/simpla-img/simpla-img.html">
-<link rel="import" href="/bower_components/simpla-admin/simpla-admin.html" async>
-
-
-</header>
+<head>
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with Github Pages.</p>
+	<a-scene embedded arjs="trackingMethod: best;">
+      <a-anchor hit-testing-enabled="true">
+   		<a-entity obj-model="obj: url(https://mariadada.github.io/monu10.obj)"></a-entity>
+        
+           		<!-- <a-entity obj-model="obj: url(https://mariadada.neocities.org/monu10.obj); mtl: url(https://mariadada.neocities.org/monu10.mtl);"></a-entity>-->
+      </a-anchor>
+		<a-camera-static/>
 
-<!-- Block of editable richtext -->
-<simpla-text path="/text"></simpla-text>
-
-<!-- An editable image -->
-<img is="simpla-img" path="/section/img">
+    </a-scene>
 
 </body>
 </html>
