@@ -8,11 +8,7 @@
 <body>
 	<a-scene embedded arjs="trackingMethod: best;">
       <a-anchor hit-testing-enabled="true">
-   		<a-assets>
-        		<a-asset-item id="myPlyModel" src="monu10.ply"></a-asset-item>
-      		</a-assets>
-
-      		<a-entity ply-model="src: #myPlyModel" rotation="-90 0 0"></a-entity>
+   		<a-entity obj-model="obj: url(monu10.obj); mtl: url(monu10.mtl)"></a-entity>
       </a-anchor>
       <a-camera-static/>
 
