@@ -1,18 +1,23 @@
 <!DOCTYPE html>	
 <html>
 <head>
-  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
 </head>
 <body>
 	<a-scene embedded arjs="trackingMethod: best;">
+      <a-assets>
+        <a-asset-item id="city-obj" src="https://raw.githubusercontent.com/mariadada/mariadada.github.io/master/monu10.obj"></a-asset-item>
+        <a-asset-item id="city-mtl" src="https://raw.githubusercontent.com/mariadada/mariadada.github.io/master/monu10.mtl"></a-asset-item>
+      </a-assets>
+    
       <a-anchor hit-testing-enabled="true">
-   		<a-entity position="0 0.5 0" obj-model="obj: url(https://mariadada.github.io/Retro_TV.obj); mtl: url(https://mariadada.github.io/Retro_TV.mtl)"></a-entity>
+          <a-entity scale=".04 .04 .04" obj-model="obj: #city-obj; mtl: #city-mtl"></a-entity>
       </a-anchor>
-      <a-camera-static/>
+		<a-camera-static/>
 
     </a-scene>
-
 </body>
 </html>
